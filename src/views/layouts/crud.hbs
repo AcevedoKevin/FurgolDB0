@@ -1,0 +1,29 @@
+<form method="POST" action="/guardar">
+  <div class="form-group">
+    <label for="idInput">ID</label>
+    <input type="text" name="idInput" aria-describedby="emailHelp" placeholder="Ingrese ID" value="{{alumno.leg_alumno}}">
+  </div>
+  <div class="form-group">
+    <label for="ordenInput">Orden</label>
+    <input type="text" name="ordenInput" aria-describedby="emailHelp" placeholder="Ingrese orden" value="{{alumno.apyn_alumno}}">
+  </div>
+  <div class="form-group">
+    <label for="descObjecto">Descripción de Objeto</label>
+    <input type="text" name="descObjeto" aria-describedby="emailHelp" value="{{alumno.cod_postal}}">
+  </div>
+  <div class="form-group">
+    <label for="ciegoInput">Descripción de Ciego</label>
+    <input type="text" name="ciegoInput" aria-describedby="emailHelp" value="{{alumno.grupo_sang_alumno}}">
+  </div>
+  <div class="form-group">
+    <label for="discInput">Descripción de Discapacitados</label>
+    <input type="text" name="discInput" aria-describedby="emailHelp" value="{{alumno.grupo_sang_alumno}}">
+  </div>
+  <div class="form-group">
+    <label for="historiaInput">Descripción de Historia</label>
+    <input type="text" name="historiaInput" aria-describedby="emailHelp" value="{{alumno.grupo_sang_alumno}}">
+  </div>
+
+
+  <button type="submit">Guardar</button>
+</form>

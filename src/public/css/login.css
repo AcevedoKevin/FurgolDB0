@@ -1,0 +1,11 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(#040f0f5f 2.5px, white 2.5px 15px, #2482325f 15px);
+    background-size: 25px 25px;
+}
+
+
+/* Panel */

@@ -1,0 +1,59 @@
+.inicio-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../img/mardelplata3.jpg");
+}
+
+.inicio-panel__section {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.inicio-panel__section:hover {
+    transform: scale(1.2);
+    transition: transform .25s ease-in-out;
+}
+
+.inicio-panel__section:first-child {
+    background-color: #248232f6;
+}
+
+.inicio-panel__section:nth-child(2) {
+    background-color: #2ba84af4;
+}
+
+.inicio-panel__section:nth-child(3) {
+    background-color: #058c42fa;
+}
+
+.inicio-panel__h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colorSecundario);
+}
+
+.panel-volver-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background-color: var(--colorPrincipal);
+    border-radius: 50%;
+    border: 2px solid var(--colorSecundario);
+    margin: 10px;
+    color: var(--colorSecundario);
+}
+
+.panel-volver-inicio:hover svg {
+    fill: var(--colorPrincipal)!important;
+}
+
+.panel-volver-inicio:hover {
+    background-color: var(--colorSecundario);
+}
