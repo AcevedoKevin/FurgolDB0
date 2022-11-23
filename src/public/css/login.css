@@ -6,6 +6,8 @@ body {
     background: radial-gradient(#00b4d8 2.5px, white 2.5px 15px, #0077b6 15px);
     background-size: 25px 25px;
 }
-
+.color-custom{
+    background-color: #0077b6!important;
+}
 
 /* Panel */
