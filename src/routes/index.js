@@ -89,7 +89,6 @@ router.post("/login", async (req, res) => {
     const { dni } = req.body
     console.log(req.body)
     conectarDB()
-
     const user = await Usuario.find({ dni })
     if (user.length === 0) {
         const newUsuario = new Usuario({
@@ -100,40 +99,42 @@ router.post("/login", async (req, res) => {
             .then((result) => {
                 console.log("Usuario no registrado")
                 console.log(result)
-                res.json(result)
+                res.send(result[0]._id.toString())
             })
             .catch((err) => {
                 console.error(err)
             })
     } else {
         console.log("Usuario ya registrado")
-        res.json(user)
+        console.log(user)
+        res.send(user[0]._id.toString())
     }
 })
 
 // router.post("/login", async (req, res) => {
-//     const { username, dni } = req.body
+//     const { dni } = req.body
 //     console.log(req.body)
-//     const newPunto = new Usuario({
-//         username,
-//         dni,
-//         date: new Date(),
-//         QR1:false,
-//         QR2:false,
-//         QR3:false,
-//         QR4:false,
-//     })
-//     newPunto
-//         .save()
-//         .then((result) => {
-//             console.log(result)
+//     conectarDB()
+
+//     const user = await Usuario.find({ dni })
+//     if (user.length === 0) {
+//         const newUsuario = new Usuario({
+//             dni,
 //         })
-//         .catch((err) => {
-//             console.error(err)
-//         })
-//     res.redirect("/resultado")
+//         newUsuario
+//             .save()
+//             .then((result) => {
+//                 console.log("Usuario no registrado")
+//                 console.log(result)
+//                 res.json(result)
+//             })
+//             .catch((err) => {
+//                 console.error(err)
+//             })
+//     } else {
+//         console.log("Usuario ya registrado")
+//         res.json(user)
+//     }
 // })
-
-
 
 module.exports = router
