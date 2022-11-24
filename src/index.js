@@ -4,6 +4,7 @@ const path = require("path")
 const handlebars = require("handlebars")
 require("dotenv").config()
 const { conectarDB } = require("./mongoDb")
+const routes = require("./routes")
 
 //Crear app
 conectarDB()
@@ -29,7 +30,7 @@ app.engine(".hbs", hbs.engine)
 app.set("view engine", "hbs")
 
 //Rutas
-app.use("/", require("./views"))
+app.use("/", routes)
 
 //Carpeta public
 app.use(express.static(path.join(__dirname, "public")))
