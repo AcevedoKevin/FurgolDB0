@@ -29,7 +29,7 @@ app.engine(".hbs", hbs.engine)
 app.set("view engine", "hbs")
 
 //Rutas
-app.use("/", require("./routes"))
+app.use("/", require("./views"))
 
 //Carpeta public
 app.use(express.static(path.join(__dirname, "public")))
